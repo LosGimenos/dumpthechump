@@ -1,0 +1,120 @@
+body {
+  background-image: url(' http://vignette3.wikia.nocookie.net/neptunia/images/b/be/Back_Alley.PNG/revision/latest?cb=20130923181106');
+}
+
+#move {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  right: 0px;
+}
+
+div#head {
+  width: 100px; height: 150px;
+  margin-left: 145px;
+  border: 2px solid #000;
+  background-image: url('https://www.placecage.com/c/200/300');
+  background-size: cover;
+  border-radius: 40%;
+  position: absolute;
+}
+
+#body {
+  height: 300px;
+  width: 200px;
+  margin-top: 125px;
+  margin-left: 100px;
+  background-image: url('http://vignette1.wikia.nocookie.net/deadrising/images/2/20/Dead_rising_White_Business_Suit_and_Striped_Tie.png/revision/latest?cb=20140409153211');
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+#lArm {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-left: 50px;
+  margin-top: 245px;
+  background-image: url('http://cliparts.co/cliparts/Bca/rpr/BcarprXc8.svg');
+  background-size: cover;
+  transform: rotate(-65deg);
+  z-index: -1;
+}
+
+#rArm {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-left: 220px;
+  margin-top: 255px;
+  background-image: url('http://www.murderati.com/storage/A-clenched-fist-008.jpg?__SQUARESPACE_CACHEVERSION=1354249381350');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: rotate(40deg) scaleX(-1);
+}
+
+#lShoe {
+  position: absolute;
+  height: 100px;
+  width: 110px;
+  margin-left: 200px;
+  margin-top: 380px;
+  background-image: url('https://openclipart.org/image/2400px/svg_to_png/169384/brown-shoes.png');
+  background-size: cover;
+}
+
+#rShoe {
+  position: absolute;
+  height: 100px;
+  width: 110px;
+  margin-left: 100px;
+  margin-top: 380px;
+  background-image: url('https://openclipart.org/image/2400px/svg_to_png/169384/brown-shoes.png');
+  background-size: cover;
+  transform: scaleX(-1)
+}
+
+.shake {
+  animation: shake 0.5s infinite alternate;
+  animation-delay: 1s;
+}
+
+.bump {
+  animation: bump 0.5s infinite alternate;
+}
+
+.nene {
+  animation: nene 0.5s infinite alternate;
+  animation-delay: .5s;
+}
+
+.move {
+    animation: move 4s infinite alternate;
+
+}
+
+@keyframes shake {
+  0% {left: -10px; }
+  100% {left: 15px; }
+}
+
+@keyframes bump {
+  0% {top: 10px; }
+  100% {top: 50px; }
+}
+
+@keyframes nene {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes move {
+  0% {left: 600px; }
+  100% { left: 20px; }
+}
