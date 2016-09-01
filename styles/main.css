@@ -13,8 +13,9 @@ div#head {
   width: 100px; height: 150px;
   margin-left: 145px;
   border: 2px solid #000;
-  background-image: url('https://www.placecage.com/c/200/300');
+  background-image: url('https://www.placecage.com/c/200/200');
   background-size: cover;
+  background-position: center;
   border-radius: 40%;
   position: absolute;
 }
@@ -81,28 +82,23 @@ div#head {
   animation-delay: 1s;
 }
 
-.bump {
-  animation: bump 0.5s infinite alternate;
-}
-
-.nene {
-  animation: nene 0.5s infinite alternate;
-  animation-delay: .5s;
-}
-
-.move {
-    animation: move 4s infinite alternate;
-
-}
-
 @keyframes shake {
   0% {left: -10px; }
   100% {left: 15px; }
 }
 
+.bump {
+  animation: bump 0.5s infinite alternate;
+}
+
 @keyframes bump {
   0% {top: 10px; }
   100% {top: 50px; }
+}
+
+.nene {
+  animation: nene 0.5s infinite alternate;
+  animation-delay: .5s;
 }
 
 @keyframes nene {
@@ -113,8 +109,33 @@ div#head {
     transform: rotate(5deg);
   }
 }
+.move {
+    animation: move 4s infinite alternate;
+
+}
 
 @keyframes move {
   0% {left: 600px; }
   100% { left: 20px; }
+}
+
+.fadein {
+  animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#prompt-div {
+  position: absolute;
+  text-align: center;
+  font-family: 'Chelsea Market', cursive;
+  color: #D2527F;
+  font-size: 100px;
+  top: 0;
+  left: 500px;
+  height: 100px;
+  width: 400px;
+
 }
