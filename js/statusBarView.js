@@ -1,37 +1,46 @@
 class StatusBarView {
   constructor() {
     this.statusBar = new StatusBar();
-    this.pointsDiv = document.createElement('div');
-    this.moxyDiv = document.createElement('div');
+    this.test = 'testy testy';
     this.statusDiv = document.createElement('div');
     this.getWrapper = document.querySelector('#status-bar');
-  }
-  createBar() {
-    this.statusBar
+    this.showPointsAndMoxy = this.appendPointsAndMoxy();
+    this.getPointsDiv = document.querySelector('#points-div');
+    this.getMoxyDiv = document.querySelector('#moxy-div');
   }
   createBarWrapper() {
     this.statusDiv.setAttribute('id', 'status-bar');
     document.body.appendChild(this.statusDiv);
   }
   createPointsDiv() {
-    this.pointsDiv.setAttribute('id', 'points-div');
-    this.getWrapper.appendChild(this.pointsDiv);
+    const pointsDiv = document.createElement('div');
+    pointsDiv.setAttribute('id', 'points-div');
+    pointsDiv.innerHTML = '0';
+    this.getWrapper.appendChild(pointsDiv);
   }
   createMoxyDiv() {
-    this.moxyDiv.setAttribute('id', 'moxy-div');
-    this.getWrapper.appendChild(this.moxyDiv);
+    const moxyDiv = document.createElement('div');
+    moxyDiv.setAttribute('id', 'moxy-div');
+    moxyDiv.innerHTML = 'No Moxy!';
+    this.getWrapper.appendChild(moxyDiv);
+  }
+  appendPointsAndMoxy() {
+    this.createPointsDiv();
+    this.createMoxyDiv();
+  }
+  checkIt() {
+    return this.statusBar.points;
   }
   updatePoints() {
-    this.pointsDiv.innerHTML = this.points;
+    this.getPointsDiv.innerHTML = '';
+    this.getPointsDiv.innerHTML = this.statusBar.points;
   }
   updateMoxy() {
-    this.moxyDiv.innerHTML = this.moxy;
+    this.getMoxyDiv.innerHTML = '';
+    this.getMoxyDiv.innerHTML = this.statusBar.moxy;
+  }
+  updateBarValues() {
+    this.updatePoints();
+    this.updateMoxy();
   }
 }
-
-let a = new StatusBarView();
-a.createBarWrapper();
-a.createPointsDiv();
-a.createMoxyDiv();
-a.updatePoints();
-a.updateMoxy();

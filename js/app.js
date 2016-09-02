@@ -1,9 +1,12 @@
 window.addEventListener('keydown', checkKeyPressed, false);
 
 const keyInputs = [81, 87, 69];
+const parts = ['head', 'body', 'right-arm', 'left-arm', 'right-shoe', 'left-shoe'];
 const moves = ['shake', 'bump', 'nene'];
+let promptArray = ['head', 'nene'];
 const hotMoves = ['move'];
 const grabParts = document.querySelectorAll('.part');
+const game = new Game();
 
 function keyInputsToMoves(keyPressed) {
   for (let i = 0; i < keyInputs.length; i++) {
@@ -22,3 +25,7 @@ function checkKeyPressed(e) {
     }
   }
 }
+
+const promptTimer = setInterval(function() {
+  game.prompt.renderPrompt();
+}, 5000);

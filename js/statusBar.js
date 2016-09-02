@@ -15,10 +15,4 @@ class StatusBar {
   wipeMoxy() {
     this.moxy = 0;
   }
-  checkPoints() {
-    return this.points;
-  }
-  checkMoxy() {
-    return this.moxy;
-  }
 }

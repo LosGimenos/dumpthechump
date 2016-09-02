@@ -14,7 +14,7 @@ div#head {
   width: 100px; height: 150px;
   margin-left: 145px;
   border: 2px solid #000;
-  background-image: url('https://www.placecage.com/c/200/200');
+  background-image: url('https://www.placecage.com/c/200/300');
   background-size: cover;
   background-position: center;
   border-radius: 40%;
@@ -80,7 +80,6 @@ div#head {
 
 .shake {
   animation: shake 0.5s infinite alternate;
-  animation-delay: 1s;
 }
 
 @keyframes shake {
@@ -99,7 +98,6 @@ div#head {
 
 .nene {
   animation: nene 0.5s infinite alternate;
-  animation-delay: .5s;
 }
 
 @keyframes nene {
@@ -144,7 +142,7 @@ div#head {
   position: absolute;
   right: 3%;
   top: 3%;
-  width: 400px;
+  width: 350px;
   height: 100px;
   padding: 1%;
 }
