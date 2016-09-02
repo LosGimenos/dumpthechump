@@ -1,4 +1,4 @@
-class Statusbar {
+class StatusBar {
   constructor() {
     this.points = 0;
     this.moxy = 0;
@@ -9,14 +9,14 @@ class Statusbar {
   takePoints() {
     this.points -= 5;
   }
-  checkPoints() {
-    return this.points;
-  }
   addMoxy() {
     this.moxy += 1;
   }
   wipeMoxy() {
     this.moxy = 0;
+  }
+  checkPoints() {
+    return this.points;
   }
   checkMoxy() {
     return this.moxy;

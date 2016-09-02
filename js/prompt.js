@@ -19,7 +19,6 @@ function displayPrompt() {
 
 function renderPrompt() {
   promptArray = [];
-  console.log(promptArray);
   const divRemove = document.querySelector('#prompt-div');
   if (divRemove !== null) {
     divRemove.innerHTML = '';

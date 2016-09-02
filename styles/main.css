@@ -6,7 +6,8 @@ body {
   position: relative;
   height: 300px;
   width: 300px;
-  right: 0px;
+  margin-left: 160px;
+  margin-top: 225px;
 }
 
 div#head {
@@ -137,5 +138,34 @@ div#head {
   left: 500px;
   height: 100px;
   width: 400px;
+}
 
+#status-bar {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  width: 400px;
+  height: 100px;
+  padding: 1%;
+}
+
+#points-div {
+  position: relative;
+  font-family: 'Chelsea Market', cursive;
+  font-size: 175%;
+  color: white;
+  width: 100%;
+  height: 40%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .25);
+}
+
+#moxy-div {
+  background-color: rgba(255, 255, 255, .25);
+  width: 100%;
+  height: 40%;
+  text-align: center;
+  font-family: 'Chelsea Market', cursive;
+  font-size: 175%;
+  margin-top: 1em;
 }
