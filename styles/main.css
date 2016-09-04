@@ -13,8 +13,7 @@ body {
 div#head {
   width: 100px; height: 150px;
   margin-left: 145px;
-  border: 2px solid #000;
-  background-image: url('https://www.placecage.com/c/200/300');
+  background-image: url('../img/tupac.png');
   background-size: cover;
   background-position: center;
   border-radius: 40%;
@@ -38,8 +37,9 @@ div#head {
   height: 100px;
   margin-left: 50px;
   margin-top: 245px;
-  background-image: url('http://cliparts.co/cliparts/Bca/rpr/BcarprXc8.svg');
+  background-image: url('http://i.imgur.com/GMCUO.png');
   background-size: cover;
+  background-position: center;
   transform: rotate(-65deg);
   z-index: -1;
 }
@@ -50,14 +50,14 @@ div#head {
   height: 100px;
   margin-left: 220px;
   margin-top: 255px;
-  background-image: url('http://www.murderati.com/storage/A-clenched-fist-008.jpg?__SQUARESPACE_CACHEVERSION=1354249381350');
+  background-image: url('http://i.imgur.com/GMCUO.png');
   background-size: cover;
   background-position: center;
   z-index: -1;
   transform: rotate(40deg) scaleX(-1);
 }
 
-#left-shoe {
+#right-shoe {
   position: absolute;
   height: 100px;
   width: 110px;
@@ -67,7 +67,7 @@ div#head {
   background-size: cover;
 }
 
-#right-shoe {
+#left-shoe {
   position: absolute;
   height: 100px;
   width: 110px;
@@ -81,7 +81,7 @@ div#head {
 /* ANIMATIONS */
 
 .shake {
-  animation: shake 0.5s infinite alternate;
+  animation: shake 0.3s infinite alternate;
 }
 
 @keyframes shake {
@@ -90,16 +90,16 @@ div#head {
 }
 
 .bump {
-  animation: bump 0.5s infinite alternate;
+  animation: bump 0.3s infinite alternate;
 }
 
 @keyframes bump {
   0% {top: 10px; }
-  100% {top: 50px; }
+  100% {top: 20px; }
 }
 
 .nene {
-  animation: nene 0.5s infinite alternate;
+  animation: nene 0.3s infinite alternate;
 }
 
 @keyframes nene {
@@ -111,7 +111,7 @@ div#head {
   }
 }
 .move {
-    animation: move 4s infinite alternate;
+    animation: move 3s infinite alternate;
 
 }
 
@@ -121,7 +121,7 @@ div#head {
 }
 
 .fadein {
-  animation: fadein 2s;
+  animation: fadein 1.75s;
 }
 @keyframes fadein {
     from { opacity: 0; }

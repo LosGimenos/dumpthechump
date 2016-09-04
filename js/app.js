@@ -32,5 +32,5 @@ const promptTimer = setInterval(function() {
 
 const stageTimer = setTimeout(function() {
   game.timeIsOut();
-}, 30000);
+}, 65000);
 

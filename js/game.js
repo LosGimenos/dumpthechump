@@ -7,7 +7,7 @@ class Game {
     this.counter = 0;
   }
   nailedMove() {
-    if (promptArray[1] == this.player.reportState()[1]) {
+    if (promptArray[1] === this.player.reportState()[1]) {
       this.player.nailedIt = true;
     }
   }
