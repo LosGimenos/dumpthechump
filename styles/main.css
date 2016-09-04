@@ -21,7 +21,7 @@ div#head {
   position: absolute;
 }
 
-#body {
+#booty {
   height: 300px;
   width: 200px;
   margin-top: 125px;
@@ -78,6 +78,8 @@ div#head {
   transform: scaleX(-1)
 }
 
+/* ANIMATIONS */
+
 .shake {
   animation: shake 0.5s infinite alternate;
 }
@@ -125,6 +127,8 @@ div#head {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+/* STATUS BARS AND PROMPTS */
 
 #prompt-div {
   position: absolute;

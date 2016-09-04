@@ -3,12 +3,8 @@ class Game {
     this.player = new Player();
     this.prompt = new Prompt();
     this.statusBarView = new StatusBarView();
-  }
-  stageTimer() {
-
-  }
-  moveTimer() {
-
+    this.turnDone = false;
+    this.counter = 0;
   }
   nailedMove() {
     if (promptArray[1] == this.player.reportState()[1]) {
@@ -26,5 +22,24 @@ class Game {
       this.statusBarView.statusBar.wipeMoxy();
       this.statusBarView.updateBarValues();
     }
+  }
+  turnTimer() {
+    if (this.turnDone === true) {
+      clearInterval(promptTimer);
+      return;
+    } else if (this.counter === 0) {
+      this.prompt.displayReady();
+    } else if (this.counter > 1) {
+      this.player.grabCurrentPartAndMove();
+      this.nailedMove();
+      this.moveConsequences();
+    }
+    if (this.counter >= 1) {
+      this.prompt.renderPrompt();
+    }
+    this.counter += 1;
+  }
+  timeIsOut() {
+    this.turnDone = true;
   }
 }
