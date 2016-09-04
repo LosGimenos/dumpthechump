@@ -21,11 +21,18 @@ class Prompt {
     if (divRemove !== null) {
       divRemove.innerHTML = '';
       divRemove.remove();
-  }
+    }
     const createPromptDiv = document.createElement('div');
     document.body.insertBefore(createPromptDiv, document.body.firstChild);
     createPromptDiv.setAttribute('id', 'prompt-div');
     createPromptDiv.className = 'fadein';
     createPromptDiv.innerHTML = this.displayPrompt() + '!';
-}
+  }
+  displayReady() {
+    const createPromptDiv = document.createElement('div');
+    document.body.insertBefore(createPromptDiv, document.body.firstChild);
+    createPromptDiv.setAttribute('id', 'prompt-div');
+    createPromptDiv.className = 'fadein';
+    createPromptDiv.innerHTML = 'GET READY TO BOOGIE!!!';
+  }
 }

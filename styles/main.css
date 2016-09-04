@@ -32,7 +32,7 @@ div#head {
   z-index: -1;
 }
 
-#lArm {
+#left-arm {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -44,7 +44,7 @@ div#head {
   z-index: -1;
 }
 
-#rArm {
+#right-arm {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -57,7 +57,7 @@ div#head {
   transform: rotate(40deg) scaleX(-1);
 }
 
-#lShoe {
+#left-shoe {
   position: absolute;
   height: 100px;
   width: 110px;
@@ -67,7 +67,7 @@ div#head {
   background-size: cover;
 }
 
-#rShoe {
+#right-shoe {
   position: absolute;
   height: 100px;
   width: 110px;
