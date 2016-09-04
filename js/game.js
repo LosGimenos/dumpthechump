@@ -26,8 +26,12 @@ class Game {
   turnTimer() {
     if (this.turnDone === true) {
       clearInterval(promptTimer);
+      setTimeout(function() {
+        game.displayWinOrLose();
+      }, 3000);
       return;
     } else if (this.counter === 0) {
+      grabAudio.play();
       this.prompt.displayReady();
     } else if (this.counter > 1) {
       this.player.grabCurrentPartAndMove();
@@ -41,5 +45,18 @@ class Game {
   }
   timeIsOut() {
     this.turnDone = true;
+  }
+  checkWin() {
+    grabAudio.pause();
+    return this.statusBarView.statusBar.points >= 100 ?
+    'you win!!!' : 'you are a disgrace to grooving!!!';
+  }
+  displayWinOrLose() {
+    this.prompt.clearPromptDiv();
+    const createPromptDiv = document.createElement('div');
+    document.body.insertBefore(createPromptDiv, document.body.firstChild);
+    createPromptDiv.setAttribute('id', 'prompt-div');
+    createPromptDiv.className = 'fadein';
+    createPromptDiv.innerHTML = this.checkWin().toUpperCase();
   }
 }

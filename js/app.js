@@ -6,6 +6,7 @@ const moves = ['shake', 'bump', 'nene'];
 let promptArray = [];
 const hotMoves = ['mc-hammer', '360', 'keanu'];
 const grabParts = document.querySelectorAll('.part');
+const grabAudio = document.querySelector('audio');
 const game = new Game();
 
 function keyInputsToMoves(keyPressed) {

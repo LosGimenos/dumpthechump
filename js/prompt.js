@@ -15,13 +15,16 @@ class Prompt {
     const movePrompt = disPrompt[1].toUpperCase();
     return `${movePrompt} that ${partPrompt}`;
 }
-  renderPrompt() {
-    promptArray = [];
+  clearPromptDiv() {
     const divRemove = document.querySelector('#prompt-div');
     if (divRemove !== null) {
       divRemove.innerHTML = '';
       divRemove.remove();
     }
+  }
+  renderPrompt() {
+    promptArray = [];
+    this.clearPromptDiv();
     const createPromptDiv = document.createElement('div');
     document.body.insertBefore(createPromptDiv, document.body.firstChild);
     createPromptDiv.setAttribute('id', 'prompt-div');
