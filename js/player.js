@@ -2,7 +2,6 @@ class Player {
   constructor() {
     this.currentPartAndMove = [];
     this.nailedIt = false;
-    this.hotMoveActive = false;
   }
   grabCurrentPartAndMove() {
     this.currentPartAndMove = [];
@@ -13,12 +12,5 @@ class Player {
   }
   reportState() {
     return this.currentPartAndMove;
-  }
-  checkMoxy() {
-    if (game.statusBarView.statusBar.moxy === 3) {
-      this.hotMoveActive = true;
-    } else if (game.statusBarView.statusBar.moxy === 0) {
-      this.hotMoveActive = false;
-    }
   }
 }

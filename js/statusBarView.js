@@ -1,7 +1,6 @@
 class StatusBarView {
   constructor() {
     this.statusBar = new StatusBar();
-    this.test = 'testy testy';
     this.statusDiv = document.createElement('div');
     this.getWrapper = document.querySelector('#status-bar');
     this.showPointsAndMoxy = this.appendPointsAndMoxy();

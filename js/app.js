@@ -4,7 +4,6 @@ const keyInputs = [81, 87, 69];
 const parts = ['head', 'booty', 'right-arm', 'left-arm', 'right-shoe', 'left-shoe'];
 const moves = ['shake', 'bump', 'nene'];
 let promptArray = [];
-const hotMoves = ['mc-hammer', 'keanu'];
 const grabParts = document.querySelectorAll('.part');
 const grabAudio = document.querySelector('audio');
 const game = new Game();

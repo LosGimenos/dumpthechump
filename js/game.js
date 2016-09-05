@@ -3,6 +3,7 @@ class Game {
     this.player = new Player();
     this.prompt = new Prompt();
     this.statusBarView = new StatusBarView();
+    this.hotMoves = new HotMoves();
     this.turnDone = false;
     this.counter = 0;
   }
@@ -20,21 +21,8 @@ class Game {
     } else {
       this.statusBarView.statusBar.takePoints();
       this.statusBarView.statusBar.wipeMoxy();
+      this.hotMoves.wipeHotMove();
       this.statusBarView.updateBarValues();
-    }
-  }
-  createHotMoveButton() {
-    const hotMoveButton = document.createElement('button');
-    hotMoveButton.innerHTML = 'GO HAM!!!';
-    hotMoveButton.onclick = function () {
-      game.activateHotMove();
-    };
-    document.body.appendChild(hotMoveButton);
-  }
-  activateHotMove() {
-    if (this.player.hotMoveActive === true) {
-      const grabMover = document.querySelector('#mover');
-      grabMover.className = 'keanu';
     }
   }
   turnTimer() {
@@ -56,7 +44,8 @@ class Game {
       this.prompt.renderPrompt();
     }
     this.counter += 1;
-    this.player.checkMoxy();
+    this.hotMoves.checkMoxy();
+    this.hotMoves.createHotMoveButton();
   }
   timeIsOut() {
     this.turnDone = true;
