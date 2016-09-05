@@ -1,5 +1,65 @@
 body {
+  background-color: black;
   background-image: url(' http://vignette3.wikia.nocookie.net/neptunia/images/b/be/Back_Alley.PNG/revision/latest?cb=20130923181106');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* OPENING SPLASH */
+
+#start {
+  position: relative;
+  margin: 20% auto;
+  height: 200px;
+  width: 400px;
+  color: #fff;
+  font-size: 250%;
+  animation: fadein 5s
+}
+
+#dump {
+  position: relative;
+  text-align: center;
+  margin: 20% auto;
+  height: 100px;
+  width: 600px;
+  color: #fff;
+  font-family: 'Chelsea Market', cursive;
+  font-size: 300%;
+  font-weight: 600;
+  box-shadow: 0px 0px 30px 30px rgba(255, 255, 255, 0.6);
+  padding: 1%;
+}
+
+#press {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  height: 500px;
+  color: white;
+}
+
+#next-page {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  font-size: 150%
+}
+
+#press a,
+#next-page a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#press a:hover,
+#next-page a:hover {
+  text-decoration: underline;
+}
+
+#press a:active,
+#next-page a:active {
+  color: lightblue;
 }
 
 /* PLAYER PARTS */
@@ -15,7 +75,7 @@ body {
 div#head {
   width: 100px; height: 150px;
   margin-left: 145px;
-  background-image: url('../img/tupac.png');
+  background-image: url('../img/kanye.png');
   background-size: cover;
   background-position: center;
   border-radius: 40%;
@@ -137,6 +197,15 @@ div#head {
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.color-switch {
+  animation: color-switch 1s alternate infinite;
+}
+
+@keyframes color-switch {
+    from {background-color: green;}
+    to {background-color: purple;}
 }
 
 /* STATUS BARS AND PROMPTS */

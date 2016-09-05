@@ -30,6 +30,7 @@ class Game {
       clearInterval(promptTimer);
       setTimeout(function() {
         game.displayWinOrLose();
+        game.displayPlayAgain();
       }, 3000);
       return;
     } else if (this.counter === 0) {
@@ -52,7 +53,7 @@ class Game {
   }
   checkWin() {
     grabAudio.pause();
-    return this.statusBarView.statusBar.points >= 100 ?
+    return this.statusBarView.statusBar.points >= 120 ?
     'you win!!! you are a groove master!!' : 'you are a disgrace to grooving!!!';
   }
   displayWinOrLose() {
@@ -62,5 +63,14 @@ class Game {
     createPromptDiv.setAttribute('id', 'prompt-div');
     createPromptDiv.className = 'fadein';
     createPromptDiv.innerHTML = this.checkWin().toUpperCase();
+  }
+  displayPlayAgain() {
+    const againDiv = document.createElement('div');
+    againDiv.setAttribute('id', 'next-page');
+    againDiv.innerHTML = '<a href=\'#\'>click to groove again</a>';
+    againDiv.onclick = function () {
+      location.reload();
+    };
+    document.body.appendChild(againDiv);
   }
 }

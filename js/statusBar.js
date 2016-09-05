@@ -24,7 +24,7 @@ class StatusBar {
   }
   moxyIsW() {
     this.moxy = '';
-    this.moxy = 'WEEEEEEE!!!';
+    this.moxy = 'WEEEEE!! 2X POINTS!';
   }
   wipeMoxy() {
     this.moxy = 0;
