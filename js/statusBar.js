@@ -10,7 +10,9 @@ class StatusBar {
     this.points -= 5;
   }
   addMoxy() {
-    this.moxy += 1;
+    if (this.moxy < 3) {
+      this.moxy += 1;
+    }
   }
   wipeMoxy() {
     this.moxy = 0;

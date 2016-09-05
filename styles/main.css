@@ -2,7 +2,9 @@ body {
   background-image: url(' http://vignette3.wikia.nocookie.net/neptunia/images/b/be/Back_Alley.PNG/revision/latest?cb=20130923181106');
 }
 
-#move {
+/* PLAYER PARTS */
+
+#mover {
   position: relative;
   height: 300px;
   width: 300px;
@@ -77,8 +79,9 @@ div#head {
   background-size: cover;
   transform: scaleX(-1)
 }
-
-/* ANIMATIONS */
+/*////////////////////*/
+   /* ANIMATIONS */
+/*///////////////////*/
 
 .shake {
   animation: shake 0.3s infinite alternate;
@@ -110,19 +113,27 @@ div#head {
     transform: rotate(5deg);
   }
 }
-.move {
-    animation: move 3s infinite alternate;
-
+.mc-hammer {
+    animation: mc-hammer 2s infinite alternate;
 }
 
-@keyframes move {
+@keyframes mc-hammer {
   0% {left: 600px; }
   100% { left: 20px; }
+}
+
+.keanu {
+  animation: keanu 2s infinite alternate;
+}
+
+@keyframes keanu {
+  100% {transform: rotate(360deg)};
 }
 
 .fadein {
   animation: fadein 1.75s;
 }
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -170,4 +181,19 @@ div#head {
   font-family: 'Chelsea Market', cursive;
   font-size: 175%;
   margin-top: 1em;
+}
+
+button {
+  position: absolute;
+  font-family: 'Chelsea Market', cursive;
+  font-size: 100%;
+  background-color: #4CAF50;
+  color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.4);
+  pading: 1%;
+  top: 10%;
+  left: 22%;
+  width: 200px;
+  height: 40px;
+  border-radius: 12px;
 }

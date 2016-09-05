@@ -23,6 +23,20 @@ class Game {
       this.statusBarView.updateBarValues();
     }
   }
+  createHotMoveButton() {
+    const hotMoveButton = document.createElement('button');
+    hotMoveButton.innerHTML = 'GO HAM!!!';
+    hotMoveButton.onclick = function () {
+      game.activateHotMove();
+    };
+    document.body.appendChild(hotMoveButton);
+  }
+  activateHotMove() {
+    if (this.player.hotMoveActive === true) {
+      const grabMover = document.querySelector('#mover');
+      grabMover.className = 'keanu';
+    }
+  }
   turnTimer() {
     if (this.turnDone === true) {
       clearInterval(promptTimer);
@@ -42,6 +56,7 @@ class Game {
       this.prompt.renderPrompt();
     }
     this.counter += 1;
+    this.player.checkMoxy();
   }
   timeIsOut() {
     this.turnDone = true;
@@ -49,7 +64,7 @@ class Game {
   checkWin() {
     grabAudio.pause();
     return this.statusBarView.statusBar.points >= 100 ?
-    'you win!!!' : 'you are a disgrace to grooving!!!';
+    'you win!!! you are a groove master!!' : 'you are a disgrace to grooving!!!';
   }
   displayWinOrLose() {
     this.prompt.clearPromptDiv();
