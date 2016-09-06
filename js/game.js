@@ -2,10 +2,17 @@ class Game {
   constructor() {
     this.player = new Player();
     this.prompt = new Prompt();
+    this.playerView = new PlayerView();
     this.statusBarView = new StatusBarView();
     this.hotMoves = new HotMoves();
     this.turnDone = false;
     this.counter = 0;
+    this.promptTimer = setInterval(function () {
+    game.turnTimer();
+    }, 5000);
+    this.stageTimer = setTimeout(function () {
+    game.timeIsOut();
+    }, 70000);
   }
   nailedMove() {
     if (promptArray[1] === this.player.reportState()[1]) {
@@ -27,7 +34,7 @@ class Game {
   }
   turnTimer() {
     if (this.turnDone === true) {
-      clearInterval(promptTimer);
+      clearInterval(game.promptTimer);
       setTimeout(function() {
         game.displayWinOrLose();
         game.displayPlayAgain();
@@ -68,9 +75,9 @@ class Game {
     const againDiv = document.createElement('div');
     againDiv.setAttribute('id', 'next-page');
     againDiv.innerHTML = '<a href=\'#\'>click to groove again</a>';
+    document.body.appendChild(againDiv);
     againDiv.onclick = function () {
       location.reload();
     };
-    document.body.appendChild(againDiv);
   }
 }

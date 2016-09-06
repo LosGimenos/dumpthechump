@@ -33,4 +33,9 @@ class StatusBar {
       game.hotMoves.removeHotMoveButton();
     }
   }
+  statusClear() {
+    this.points = 0;
+    this.moxy = 0;
+    this.doublePoints = false;
+  }
 }
